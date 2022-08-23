@@ -33,7 +33,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@chainlink/contracts", "npm:0.4.2"]\
+            ["@chainlink/contracts", "npm:0.4.2"],\
+            ["ethers", "npm:5.7.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -784,7 +785,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["web3-training", "workspace:."],\
-            ["@chainlink/contracts", "npm:0.4.2"]\
+            ["@chainlink/contracts", "npm:0.4.2"],\
+            ["ethers", "npm:5.7.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
