@@ -1,8 +1,20 @@
 {
-	"name": "web3-training",
-	"packageManager": "yarn@3.2.2",
-	"dependencies": {
-		"@chainlink/contracts": "^0.4.2",
-		"ethers": "^5.7.0"
-	}
+    "name": "web3-training",
+    "packageManager": "yarn@2.4.3",
+    "scripts": {
+        "compile": "yarn solcjs --bin --abi --include-path .yarn/cache/ --base-path . -o . contracts/SimpleStorage.sol"
+    },
+    "dependencies": {
+        "@chainlink/contracts": "^0.4.2",
+        "dotenv": "^16.0.1",
+        "ethers": "^5.7.0",
+        "fs-extra": "^10.1.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^9.0.13",
+        "@types/node": "^18.7.11",
+        "prettier": "^2.7.1",
+        "solc": "^0.8.16",
+        "typescript": "^4.7.4"
+    }
 }

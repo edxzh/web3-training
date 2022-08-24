@@ -34,7 +34,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@chainlink/contracts", "npm:0.4.2"],\
-            ["ethers", "npm:5.7.0"]\
+            ["@types/fs-extra", "npm:9.0.13"],\
+            ["@types/node", "npm:18.7.11"],\
+            ["dotenv", "npm:16.0.1"],\
+            ["ethers", "npm:5.7.0"],\
+            ["fs-extra", "npm:10.1.0"],\
+            ["prettier", "npm:2.7.1"],\
+            ["solc", "npm:0.8.16"],\
+            ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -524,6 +531,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/fs-extra", [\
+        ["npm:9.0.13", {\
+          "packageLocation": "./.yarn/cache/@types-fs-extra-npm-9.0.13-12fb7badd7-add79e212a.zip/node_modules/@types/fs-extra/",\
+          "packageDependencies": [\
+            ["@types/fs-extra", "npm:9.0.13"],\
+            ["@types/node", "npm:18.7.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/node", [\
+        ["npm:18.7.11", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.7.11-f39f364ab6-66f200a559.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.7.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["aes-js", [\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/aes-js-npm-3.0.0-fdf135c6be-251e26d533.zip/node_modules/aes-js/",\
@@ -610,12 +636,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["command-exists", [\
+        ["npm:1.2.9", {\
+          "packageLocation": "./.yarn/cache/command-exists-npm-1.2.9-cc51a1f78a-729ae3d88a.zip/node_modules/command-exists/",\
+          "packageDependencies": [\
+            ["command-exists", "npm:1.2.9"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["commander", [\
+        ["npm:8.3.0", {\
+          "packageLocation": "./.yarn/cache/commander-npm-8.3.0-c0d18c66d5-0f82321821.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:8.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["deep-eql", [\
         ["npm:3.0.1", {\
           "packageLocation": "./.yarn/cache/deep-eql-npm-3.0.1-9a66c09c65-4f4c9fb79e.zip/node_modules/deep-eql/",\
           "packageDependencies": [\
             ["deep-eql", "npm:3.0.1"],\
             ["type-detect", "npm:4.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.0.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.1-d99e72bb95-f459ffce07.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -675,11 +728,54 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["follow-redirects", [\
+        ["npm:1.15.1", {\
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.15.1-6b191885cd-6aa4e3e3cd.zip/node_modules/follow-redirects/",\
+          "packageDependencies": [\
+            ["follow-redirects", "npm:1.15.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:399bea2fd54b6c72666213f793c91a9a31fd22245a588c3535fc1fa9f593141103d1d6bbc4aa94cf37732eb4a9261fe0666a6783728716cac96434ba1a2290db#npm:1.15.1", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-7c53c73970/0/cache/follow-redirects-npm-1.15.1-6b191885cd-6aa4e3e3cd.zip/node_modules/follow-redirects/",\
+          "packageDependencies": [\
+            ["follow-redirects", "virtual:399bea2fd54b6c72666213f793c91a9a31fd22245a588c3535fc1fa9f593141103d1d6bbc4aa94cf37732eb4a9261fe0666a6783728716cac96434ba1a2290db#npm:1.15.1"],\
+            ["@types/debug", null],\
+            ["debug", null]\
+          ],\
+          "packagePeers": [\
+            "@types/debug",\
+            "debug"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["fs-extra", [\
+        ["npm:10.1.0", {\
+          "packageLocation": "./.yarn/cache/fs-extra-npm-10.1.0-86573680ed-dc94ab3709.zip/node_modules/fs-extra/",\
+          "packageDependencies": [\
+            ["fs-extra", "npm:10.1.0"],\
+            ["graceful-fs", "npm:4.2.10"],\
+            ["jsonfile", "npm:6.1.0"],\
+            ["universalify", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["get-func-name", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/get-func-name-npm-2.0.0-afbf363765-8d82e69f3e.zip/node_modules/get-func-name/",\
           "packageDependencies": [\
             ["get-func-name", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["graceful-fs", [\
+        ["npm:4.2.10", {\
+          "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.10-79c70989ca-3f109d70ae.zip/node_modules/graceful-fs/",\
+          "packageDependencies": [\
+            ["graceful-fs", "npm:4.2.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -725,12 +821,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["jsonfile", [\
+        ["npm:6.1.0", {\
+          "packageLocation": "./.yarn/cache/jsonfile-npm-6.1.0-20a4796cee-7af3b8e1ac.zip/node_modules/jsonfile/",\
+          "packageDependencies": [\
+            ["jsonfile", "npm:6.1.0"],\
+            ["graceful-fs", "npm:4.2.10"],\
+            ["universalify", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["loupe", [\
         ["npm:2.3.4", {\
           "packageLocation": "./.yarn/cache/loupe-npm-2.3.4-2067703c8d-5af91db61a.zip/node_modules/loupe/",\
           "packageDependencies": [\
             ["loupe", "npm:2.3.4"],\
             ["get-func-name", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["memorystream", [\
+        ["npm:0.3.1", {\
+          "packageLocation": "./.yarn/cache/memorystream-npm-0.3.1-ae973f1d16-f18b42440d.zip/node_modules/memorystream/",\
+          "packageDependencies": [\
+            ["memorystream", "npm:0.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -753,11 +869,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["os-tmpdir", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/os-tmpdir-npm-1.0.2-e305b0689b-5666560f7b.zip/node_modules/os-tmpdir/",\
+          "packageDependencies": [\
+            ["os-tmpdir", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["pathval", [\
         ["npm:1.1.1", {\
           "packageLocation": "./.yarn/cache/pathval-npm-1.1.1-ce0311d7e0-090e314771.zip/node_modules/pathval/",\
           "packageDependencies": [\
             ["pathval", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prettier", [\
+        ["npm:2.7.1", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -771,11 +905,64 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["semver", [\
+        ["npm:5.7.1", {\
+          "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-57fd0acfd0.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:5.7.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["solc", [\
+        ["npm:0.8.16", {\
+          "packageLocation": "./.yarn/cache/solc-npm-0.8.16-399bea2fd5-9c160f13fc.zip/node_modules/solc/",\
+          "packageDependencies": [\
+            ["solc", "npm:0.8.16"],\
+            ["command-exists", "npm:1.2.9"],\
+            ["commander", "npm:8.3.0"],\
+            ["follow-redirects", "virtual:399bea2fd54b6c72666213f793c91a9a31fd22245a588c3535fc1fa9f593141103d1d6bbc4aa94cf37732eb4a9261fe0666a6783728716cac96434ba1a2290db#npm:1.15.1"],\
+            ["js-sha3", "npm:0.8.0"],\
+            ["memorystream", "npm:0.3.1"],\
+            ["semver", "npm:5.7.1"],\
+            ["tmp", "npm:0.0.33"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tmp", [\
+        ["npm:0.0.33", {\
+          "packageLocation": "./.yarn/cache/tmp-npm-0.0.33-bcbf65df2a-902d7aceb7.zip/node_modules/tmp/",\
+          "packageDependencies": [\
+            ["tmp", "npm:0.0.33"],\
+            ["os-tmpdir", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["type-detect", [\
         ["npm:4.0.8", {\
           "packageLocation": "./.yarn/cache/type-detect-npm-4.0.8-8d8127b901-62b5628bff.zip/node_modules/type-detect/",\
           "packageDependencies": [\
             ["type-detect", "npm:4.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["typescript", [\
+        ["patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-fc259c5d56-9096d8f6c1.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["universalify", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/universalify-npm-2.0.0-03b8b418a8-2406a4edf4.zip/node_modules/universalify/",\
+          "packageDependencies": [\
+            ["universalify", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -786,7 +973,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["web3-training", "workspace:."],\
             ["@chainlink/contracts", "npm:0.4.2"],\
-            ["ethers", "npm:5.7.0"]\
+            ["@types/fs-extra", "npm:9.0.13"],\
+            ["@types/node", "npm:18.7.11"],\
+            ["dotenv", "npm:16.0.1"],\
+            ["ethers", "npm:5.7.0"],\
+            ["fs-extra", "npm:10.1.0"],\
+            ["prettier", "npm:2.7.1"],\
+            ["solc", "npm:0.8.16"],\
+            ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
         }]\
