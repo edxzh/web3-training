@@ -1,5 +1,5 @@
 import ethers from "ethers";
-import * as fs from "fs-extra";
+import * as fs from "fs";
 import "dotenv/config";
 
 const main = async () => {
@@ -7,11 +7,11 @@ const main = async () => {
     let wallet = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
 
     const abi = fs.readFileSync(
-        "./SimpleStorage_sol_SimpleStorage.abi",
+        "./contracts_SimpleStorage_sol_SimpleStorage.abi",
         "utf8"
     );
     const binary = fs.readFileSync(
-        "./SimpleStorage_sol_SimpleStorage.bin",
+        "./contracts_SimpleStorage_sol_SimpleStorage.bin",
         "utf8"
     );
     const contractFactory = new ethers.ContractFactory(abi, binary, wallet);
