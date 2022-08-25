@@ -1,2 +1,3 @@
 .yarn
 contracts_SimpleStorage_sol_*
+.env
