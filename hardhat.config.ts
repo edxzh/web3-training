@@ -1,14 +1,11 @@
-import "@nomiclabs/hardhat-waffle";
-import "hardhat-gas-reporter";
-import "@nomiclabs/hardhat-etherscan";
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "dotenv/config";
 
-const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
-const RINKBY_RPC_URL = process.env.RINKBY_RPC_URL;
-const PRIVATE_KEY = process.env.RINKBY_RPC_URL || "";
-const ETHERSCAN_API_KEY = process.env.ETHETHERSCAN_API_KEY;
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "";
+const RINKBY_RPC_URL = process.env.RINKBY_RPC_URL || "";
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+const ETHERSCAN_API_KEY = process.env.ETHETHERSCAN_API_KEY || "";
 
 const config: HardhatUserConfig = {
     solidity: "0.8.9",

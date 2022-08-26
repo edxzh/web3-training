@@ -3,7 +3,7 @@
     "target": "ESNext",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "outDir": "./dist/",
     "esModuleInterop": true,
@@ -11,6 +11,6 @@
     "strict": true,
     "skipLibCheck": true,
   },
-  "files": ["hardhat.config.ts"],
+  "files": ["./hardhat.config.ts"],
   "include": ["./test", "./src", "./scripts"],
 }

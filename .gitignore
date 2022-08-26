@@ -1,3 +1,10 @@
 .yarn
 contracts_SimpleStorage_sol_*
 .env
+
+#Hardhat files
+cache
+artifacts
+gas-report.txt
+typechain-types
+gas-report.txt
