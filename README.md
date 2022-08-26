@@ -1,18 +1,33 @@
 # web3-training
-learn how to write smart contract with solidity and javascript
+This project is to keep track of my journey of learning web3. includes:
+* smart contract with Solitidy
+* deploy smart contract to local net(hardhat/ganache)
+* deploy smart contract to test net(Rinkeby)
 
 ### environment
 * nodejs 16.11.0
 * yarn 3
-* hardhat
+* [hardhat](https://github.com/NomicFoundation/hardhat)
 * Rinkeby network
 * [Alchemy](https://www.alchemy.com/)
 * [ganache](https://trufflesuite.com/ganache/)
 
+### setup environment
+```
+yarn install
+yarn dlx @yarnpkg/sdks vscode
+```
+
+### deploy contract to hardhat blockchain
 ```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+yarn hardhat help
+yarn hardhat node
+yarn hardhat run scripts/deploy.ts
+```
+
+### run test
+```shell
+yarn hardhat typechain
+yarn hardhat test
+GAS_REPORT=true yarn hardhat test
 ```
