@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ethers", "npm:5.7.0"],\
             ["hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.10.2"],\
             ["hardhat-gas-reporter", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.8"],\
+            ["husky", "npm:8.0.1"],\
             ["prettier", "npm:2.7.1"],\
             ["solhint", "npm:3.3.7"],\
             ["solidity-coverage", "npm:0.7.21"],\
@@ -5478,6 +5479,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["husky", [\
+        ["npm:8.0.1", {\
+          "packageLocation": "./.yarn/cache/husky-npm-8.0.1-85fede8470-943a73a13d.zip/node_modules/husky/",\
+          "packageDependencies": [\
+            ["husky", "npm:8.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["iconv-lite", [\
         ["npm:0.4.24", {\
           "packageLocation": "./.yarn/cache/iconv-lite-npm-0.4.24-c5c4ac6695-bd9f120f5a.zip/node_modules/iconv-lite/",\
@@ -10157,6 +10167,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ethers", "npm:5.7.0"],\
             ["hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.10.2"],\
             ["hardhat-gas-reporter", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.8"],\
+            ["husky", "npm:8.0.1"],\
             ["prettier", "npm:2.7.1"],\
             ["solhint", "npm:3.3.7"],\
             ["solidity-coverage", "npm:0.7.21"],\

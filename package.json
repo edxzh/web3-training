@@ -27,6 +27,7 @@
         "ethers": "^5.4.7",
         "hardhat": "^2.10.2",
         "hardhat-gas-reporter": "^1.0.8",
+        "husky": "^8.0.1",
         "prettier": "^2.7.1",
         "solhint": "^3.3.7",
         "solidity-coverage": "^0.7.21",

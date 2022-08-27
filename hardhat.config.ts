@@ -1,4 +1,4 @@
-import { HardhatUserConfig, task } from "hardhat/config";
+import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
 import "./tasks/block-number";
 import "@nomicfoundation/hardhat-toolbox";
