@@ -15,17 +15,17 @@ const config: HardhatUserConfig = {
     defaultNetwork: "hardhat",
     networks: {
         hardhat: {},
-        rinkby: {
+        goerli: {
             url: RINKBY_RPC_URL,
             accounts: [PRIVATE_KEY],
-            chainId: 4,
+            chainId: 5,
         },
     },
     etherscan: {
         apiKey: ETHERSCAN_API_KEY,
     },
     gasReporter: {
-        enabled: true,
+        enabled: false,
         currency: "USD",
         outputFile: "gas-report.txt",
         noColors: true,

@@ -22,12 +22,12 @@ yarn dlx @yarnpkg/sdks vscode
 ```shell
 yarn hardhat help
 yarn hardhat node
-yarn hardhat run scripts/deploy.ts
+yarn deploy
 ```
 
-### run test
+### run lint and test
 ```shell
 yarn hardhat typechain
-yarn hardhat test
-GAS_REPORT=true yarn hardhat test
+yarn solhint
+yarn test
 ```

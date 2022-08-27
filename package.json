@@ -1,6 +1,11 @@
 {
     "name": "web3-training",
     "packageManager": "yarn@3.2.3",
+    "scripts": {
+        "solhint": "solhint contracts/*.sol",
+        "test": "hardhat test",
+        "deploy": "hardhat run scripts/deploy.ts"
+    },
     "dependencies": {
         "@chainlink/contracts": "^0.4.2",
         "dotenv": "^16.0.1"
@@ -23,6 +28,7 @@
         "hardhat": "^2.10.2",
         "hardhat-gas-reporter": "^1.0.8",
         "prettier": "^2.7.1",
+        "solhint": "^3.3.7",
         "solidity-coverage": "^0.7.21",
         "ts-node": ">=8.0.0",
         "typechain": "^8.1.0",
