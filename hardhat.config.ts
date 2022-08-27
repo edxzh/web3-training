@@ -1,6 +1,9 @@
-import { HardhatUserConfig } from "hardhat/config";
+import { HardhatUserConfig, task } from "hardhat/config";
+import "@nomiclabs/hardhat-ethers";
+import "./tasks/block-number";
 import "@nomicfoundation/hardhat-toolbox";
 import "dotenv/config";
+import "@nomiclabs/hardhat-ethers";
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "";
 const RINKBY_RPC_URL = process.env.RINKBY_RPC_URL || "";
