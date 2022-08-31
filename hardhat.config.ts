@@ -4,6 +4,7 @@ import "./tasks/block-number";
 import "@nomicfoundation/hardhat-toolbox";
 import "dotenv/config";
 import "@nomiclabs/hardhat-ethers";
+import "hardhat-deploy";
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "";
 const RINKBY_RPC_URL = process.env.RINKBY_RPC_URL || "";
@@ -30,6 +31,12 @@ const config: HardhatUserConfig = {
         outputFile: "gas-report.txt",
         noColors: true,
         coinmarketcap: COINMARKETCAP_API_KEY,
+    },
+    namedAccounts: {
+        deployer: {
+            default: 0,
+            1: 0,
+        },
     },
 };
 
