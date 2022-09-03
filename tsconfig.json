@@ -11,6 +11,5 @@
     "strict": true,
     "skipLibCheck": true,
   },
-  "files": ["./hardhat.config.ts"],
-  "include": ["./test", "./src", "./scripts", "./tasks", "./deploy"],
+  "include": ["./hardhat.config.ts", "./test", "./src", "./scripts", "./tasks", "./deploy"],
 }

@@ -1,9 +1,9 @@
 import { HardhatUserConfig } from "hardhat/config";
+import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-ethers";
 import "./tasks/block-number";
 import "@nomicfoundation/hardhat-toolbox";
 import "dotenv/config";
-import "@nomiclabs/hardhat-ethers";
 import "hardhat-deploy";
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "";
