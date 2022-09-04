@@ -11,21 +11,24 @@ error WithdrawFailed();
 contract FundMe {
     using PriceConverter for uint256;
 
-    mapping(address => uint256) public addressToAmountFunded;
-    address[] public funders;
+    mapping(address => uint256) private sAddressToAmountFunded;
+    address[] private sFunders;
 
     address public immutable iOwner;
     uint256 public constant MINIMUM_USD = 50 * 10**18;
+    AggregatorV3Interface private sPriceFeed;
 
-    constructor() {
+    constructor(address priceFeed) {
+        sPriceFeed = AggregatorV3Interface(priceFeed);
         iOwner = msg.sender;
     }
 
     function fund() public payable {
-        if (msg.value.getConversionRate() < MINIMUM_USD) revert NotEnoughETH();
+        if (msg.value.getConversionRate(sPriceFeed) < MINIMUM_USD)
+            revert NotEnoughETH();
 
-        addressToAmountFunded[msg.sender] += msg.value;
-        funders.push(msg.sender);
+        sAddressToAmountFunded[msg.sender] += msg.value;
+        sFunders.push(msg.sender);
     }
 
     function getVersion() public view returns (uint256) {
@@ -44,14 +47,14 @@ contract FundMe {
     function withdraw() public payable onlyOwner {
         for (
             uint256 funderIndex = 0;
-            funderIndex < funders.length;
+            funderIndex < sFunders.length;
             funderIndex++
         ) {
-            address funder = funders[funderIndex];
-            addressToAmountFunded[funder] = 0;
+            address funder = sFunders[funderIndex];
+            sAddressToAmountFunded[funder] = 0;
         }
 
-        funders = new address[](0);
+        sFunders = new address[](0);
         (bool callSuccess, ) = payable(msg.sender).call{
             value: address(this).balance
         }("");
