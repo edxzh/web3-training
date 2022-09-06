@@ -16,7 +16,7 @@ contract FundMe {
 
     address public immutable iOwner;
     uint256 public constant MINIMUM_USD = 50 * 10**18;
-    AggregatorV3Interface private sPriceFeed;
+    AggregatorV3Interface public sPriceFeed;
 
     constructor(address priceFeed) {
         sPriceFeed = AggregatorV3Interface(priceFeed);

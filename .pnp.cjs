@@ -39,7 +39,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nomicfoundation/hardhat-chai-matchers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.3"],\
             ["@nomicfoundation/hardhat-network-helpers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.4"],\
             ["@nomicfoundation/hardhat-toolbox", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.2"],\
-            ["@nomiclabs/hardhat-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1"],\
+            ["@nomiclabs/hardhat-ethers", [\
+              "hardhat-deploy-ethers",\
+              "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13"\
+            ]],\
             ["@nomiclabs/hardhat-etherscan", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:3.1.0"],\
             ["@nomiclabs/hardhat-waffle", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.0.3"],\
             ["@typechain/ethers-v5", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:10.1.0"],\
@@ -791,7 +794,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@nomicfoundation/hardhat-chai-matchers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.3"],\
             ["@ethersproject/abi", "npm:5.7.0"],\
-            ["@nomiclabs/hardhat-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1"],\
+            ["@nomiclabs/hardhat-ethers", [\
+              "hardhat-deploy-ethers",\
+              "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13"\
+            ]],\
             ["@types/chai", "npm:4.3.3"],\
             ["@types/chai-as-promised", "npm:7.1.5"],\
             ["@types/ethers", null],\
@@ -857,7 +863,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ethersproject/providers", "npm:5.7.0"],\
             ["@nomicfoundation/hardhat-chai-matchers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.3"],\
             ["@nomicfoundation/hardhat-network-helpers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.4"],\
-            ["@nomiclabs/hardhat-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1"],\
+            ["@nomiclabs/hardhat-ethers", [\
+              "hardhat-deploy-ethers",\
+              "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13"\
+            ]],\
             ["@nomiclabs/hardhat-etherscan", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:3.1.0"],\
             ["@typechain/ethers-v5", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:10.1.0"],\
             ["@typechain/hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:6.1.2"],\
@@ -927,32 +936,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@nomiclabs/hardhat-ethers", [\
-        ["npm:2.1.1", {\
-          "packageLocation": "./.yarn/cache/@nomiclabs-hardhat-ethers-npm-2.1.1-d838b382f0-c702ffcd28.zip/node_modules/@nomiclabs/hardhat-ethers/",\
-          "packageDependencies": [\
-            ["@nomiclabs/hardhat-ethers", "npm:2.1.1"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1", {\
-          "packageLocation": "./.yarn/__virtual__/@nomiclabs-hardhat-ethers-virtual-b80e08507e/0/cache/@nomiclabs-hardhat-ethers-npm-2.1.1-d838b382f0-c702ffcd28.zip/node_modules/@nomiclabs/hardhat-ethers/",\
-          "packageDependencies": [\
-            ["@nomiclabs/hardhat-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1"],\
-            ["@types/ethers", null],\
-            ["@types/hardhat", null],\
-            ["ethers", "npm:5.7.0"],\
-            ["hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.10.2"]\
-          ],\
-          "packagePeers": [\
-            "@types/ethers",\
-            "@types/hardhat",\
-            "ethers",\
-            "hardhat"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@nomiclabs/hardhat-etherscan", [\
         ["npm:3.1.0", {\
           "packageLocation": "./.yarn/cache/@nomiclabs-hardhat-etherscan-npm-3.1.0-4205e922b9-3f28abc39e.zip/node_modules/@nomiclabs/hardhat-etherscan/",\
@@ -997,7 +980,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@nomiclabs-hardhat-waffle-virtual-3ae4b2ae07/0/cache/@nomiclabs-hardhat-waffle-npm-2.0.3-c0af80c6c5-e68c9e1390.zip/node_modules/@nomiclabs/hardhat-waffle/",\
           "packageDependencies": [\
             ["@nomiclabs/hardhat-waffle", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.0.3"],\
-            ["@nomiclabs/hardhat-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1"],\
+            ["@nomiclabs/hardhat-ethers", [\
+              "hardhat-deploy-ethers",\
+              "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13"\
+            ]],\
             ["@types/ethereum-waffle", null],\
             ["@types/ethers", null],\
             ["@types/hardhat", null],\
@@ -5390,6 +5376,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@ethersproject/hardware-wallets",\
             "@types/ethersproject__hardware-wallets",\
             "@types/hardhat",\
+            "hardhat"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["hardhat-deploy-ethers", [\
+        ["npm:0.3.0-beta.13", {\
+          "packageLocation": "./.yarn/cache/hardhat-deploy-ethers-npm-0.3.0-beta.13-98c7c1196f-45206bf8d0.zip/node_modules/hardhat-deploy-ethers/",\
+          "packageDependencies": [\
+            ["hardhat-deploy-ethers", "npm:0.3.0-beta.13"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13", {\
+          "packageLocation": "./.yarn/__virtual__/hardhat-deploy-ethers-virtual-3998619e30/0/cache/hardhat-deploy-ethers-npm-0.3.0-beta.13-98c7c1196f-45206bf8d0.zip/node_modules/hardhat-deploy-ethers/",\
+          "packageDependencies": [\
+            ["hardhat-deploy-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13"],\
+            ["@types/ethers", null],\
+            ["@types/hardhat", null],\
+            ["ethers", "npm:5.7.0"],\
+            ["hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.10.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/ethers",\
+            "@types/hardhat",\
+            "ethers",\
             "hardhat"\
           ],\
           "linkType": "HARD"\
@@ -10378,7 +10390,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nomicfoundation/hardhat-chai-matchers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.3"],\
             ["@nomicfoundation/hardhat-network-helpers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.4"],\
             ["@nomicfoundation/hardhat-toolbox", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:1.0.2"],\
-            ["@nomiclabs/hardhat-ethers", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.1.1"],\
+            ["@nomiclabs/hardhat-ethers", [\
+              "hardhat-deploy-ethers",\
+              "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:0.3.0-beta.13"\
+            ]],\
             ["@nomiclabs/hardhat-etherscan", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:3.1.0"],\
             ["@nomiclabs/hardhat-waffle", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.0.3"],\
             ["@typechain/ethers-v5", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:10.1.0"],\
