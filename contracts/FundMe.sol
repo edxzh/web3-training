@@ -11,8 +11,8 @@ error WithdrawFailed();
 contract FundMe {
     using PriceConverter for uint256;
 
-    mapping(address => uint256) private sAddressToAmountFunded;
-    address[] private sFunders;
+    mapping(address => uint256) public sAddressToAmountFunded;
+    address[] public sFunders;
 
     address public immutable iOwner;
     uint256 public constant MINIMUM_USD = 50 * 10**18;

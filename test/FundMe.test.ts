@@ -1,6 +1,5 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
-import { assert } from "console";
 import { ethers, network, deployments } from "hardhat";
 import { developmentChains } from "../helper-hardhat-config";
 import { FundMe, MockV3Aggregator } from "../typechain-types";
@@ -16,7 +15,7 @@ describe("FundMe", () => {
         }
 
         const accounts = await ethers.getSigners();
-        const deployer = accounts[0];
+        deployer = accounts[0];
 
         await deployments.fixture(["all"]);
 
@@ -28,6 +27,33 @@ describe("FundMe", () => {
         it("sets the aggregator address correctly", async () => {
             const response = await fundMe.sPriceFeed();
             expect(response).to.equal(mockV3Aggregator.address);
+        });
+    });
+
+    describe("fund", () => {
+        it("Fails if you don't send enough ETH", async () => {
+            await expect(fundMe.fund()).to.be.revertedWithCustomError(
+                fundMe,
+                "NotEnoughETH"
+            );
+        });
+
+        it("Updates the amount funded data structure", async () => {
+            await fundMe.fund({ value: ethers.utils.parseEther("1") });
+            const response = await fundMe.sAddressToAmountFunded(
+                deployer.address
+            );
+
+            expect(response.toString()).to.equal(
+                ethers.utils.parseEther("1").toString()
+            );
+        });
+
+        it("Add funder to array of funders", async () => {
+            await fundMe.fund({ value: ethers.utils.parseEther("1") });
+            const response = await fundMe.sFunders(0);
+
+            expect(response).to.equal(deployer.address);
         });
     });
 });
