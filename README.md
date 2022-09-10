@@ -31,3 +31,10 @@ yarn hardhat typechain
 yarn solhint
 yarn test
 ```
+
+### Scripts
+``` shell
+yarn hardhat node
+yarn hardhat run scripts/fund.ts
+yarn hardhat run scripts/withdraw.ts
+```

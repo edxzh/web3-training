@@ -10,3 +10,4 @@ typechain-types
 gas-report.txt
 coverage.json
 coverage/
+deployments
