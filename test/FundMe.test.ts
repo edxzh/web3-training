@@ -56,4 +56,36 @@ describe("FundMe", () => {
             expect(response).to.equal(deployer.address);
         });
     });
+
+    describe("withdraw", () => {
+        beforeEach(async () => {
+            await fundMe.fund({ value: ethers.utils.parseEther("1") });
+        });
+
+        it("gives a single funder all their ETH back", async () => {
+            const startingFundMeBalance = await fundMe.provider.getBalance(
+                fundMe.address
+            );
+            const startingDeployerBalance = await fundMe.provider.getBalance(
+                deployer.address
+            );
+
+            const txResponse = await fundMe.withdraw();
+            const txReceipt = await txResponse.wait();
+            const { gasUsed, effectiveGasPrice } = txReceipt;
+            const gasCost = gasUsed.mul(effectiveGasPrice);
+
+            const endingFundMeBalance = await fundMe.provider.getBalance(
+                fundMe.address
+            );
+            const endingDeployerBalance = await fundMe.provider.getBalance(
+                deployer.address
+            );
+
+            expect(endingFundMeBalance.toString()).to.equal("0");
+            expect(
+                startingFundMeBalance.add(startingDeployerBalance).toString()
+            ).to.equal(endingDeployerBalance.add(gasCost).toString());
+        });
+    });
 });
