@@ -25,7 +25,7 @@ describe("FundMe", () => {
 
     describe("Constructor", () => {
         it("sets the aggregator address correctly", async () => {
-            const response = await fundMe.sPriceFeed();
+            const response = await fundMe.getPriceFeed();
             expect(response).to.equal(mockV3Aggregator.address);
         });
     });
@@ -40,7 +40,7 @@ describe("FundMe", () => {
 
         it("Updates the amount funded data structure", async () => {
             await fundMe.fund({ value: ethers.utils.parseEther("1") });
-            const response = await fundMe.sAddressToAmountFunded(
+            const response = await fundMe.getAddressToAmountFunded(
                 deployer.address
             );
 
@@ -51,7 +51,7 @@ describe("FundMe", () => {
 
         it("Add funder to array of funders", async () => {
             await fundMe.fund({ value: ethers.utils.parseEther("1") });
-            const response = await fundMe.sFunders(0);
+            const response = await fundMe.getFunder(0);
 
             expect(response).to.equal(deployer.address);
         });

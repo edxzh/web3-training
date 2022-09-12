@@ -6,17 +6,16 @@ import "./PriceConverter.sol";
 
 error NotOwner();
 error NotEnoughETH();
-error WithdrawFailed();
 
 contract FundMe {
     using PriceConverter for uint256;
 
-    mapping(address => uint256) public sAddressToAmountFunded;
-    address[] public sFunders;
+    mapping(address => uint256) private sAddressToAmountFunded;
+    address[] private sFunders;
 
-    address public immutable iOwner;
-    uint256 public constant MINIMUM_USD = 50 * 10**18;
-    AggregatorV3Interface public sPriceFeed;
+    address private immutable iOwner;
+    uint256 private constant MINIMUM_USD = 50 * 10**18;
+    AggregatorV3Interface private sPriceFeed;
 
     constructor(address priceFeed) {
         sPriceFeed = AggregatorV3Interface(priceFeed);
@@ -45,21 +44,19 @@ contract FundMe {
     }
 
     function withdraw() public payable onlyOwner {
+        payable(msg.sender).transfer(address(this).balance);
+        address[] memory funders = sFunders;
+
         for (
             uint256 funderIndex = 0;
-            funderIndex < sFunders.length;
+            funderIndex < funders.length;
             funderIndex++
         ) {
-            address funder = sFunders[funderIndex];
+            address funder = funders[funderIndex];
             sAddressToAmountFunded[funder] = 0;
         }
 
         sFunders = new address[](0);
-        (bool callSuccess, ) = payable(msg.sender).call{
-            value: address(this).balance
-        }("");
-
-        if (!callSuccess) revert WithdrawFailed();
     }
 
     fallback() external payable {
@@ -68,5 +65,25 @@ contract FundMe {
 
     receive() external payable {
         fund();
+    }
+
+    function getFunder(uint256 index) public view returns (address) {
+        return sFunders[index];
+    }
+
+    function getAddressToAmountFunded(address fundingAddress)
+        public
+        view
+        returns (uint256)
+    {
+        return sAddressToAmountFunded[fundingAddress];
+    }
+
+    function getOwner() public view returns (address) {
+        return iOwner;
+    }
+
+    function getPriceFeed() public view returns (AggregatorV3Interface) {
+        return sPriceFeed;
     }
 }
