@@ -5,7 +5,6 @@ This project is to keep track of my journey of learning web3. includes:
 * Deploy smart contract to test net(rinkeby, goerli)
 * Lint & unit test
 
-another project will be created which allow user to interact with the contract through web page.
 ### environment
 * nodejs 16.11.0
 * yarn 3

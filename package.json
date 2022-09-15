@@ -34,6 +34,7 @@
         "hardhat": "^2.10.2",
         "hardhat-deploy": "0.9.29",
         "hardhat-gas-reporter": "^1.0.8",
+        "http-server": "^14.1.1",
         "husky": "^8.0.1",
         "prettier": "^2.7.1",
         "solhint": "^3.3.7",
