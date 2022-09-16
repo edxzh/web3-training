@@ -32,11 +32,11 @@ yarn http-server
 please note that some browser may raise `cors` issue, please use chrome.
 
 ### add hardhat network in metamask
-* your account icon(top right corner) => settings => Networks => Add Network
+* your account icon(top right corner) => Settings => Networks => Add Network
 * Network name: any name, New RPC URL: http://127.0.0.1:8545, Chain ID: 31337, Currency Symbol: ETH, Save
 * Import an account from terminal that's running hardhat node, import the first `private key`, then you'll have an account in hardhat network that has 10,000 ETH for testing.
 
-sometime you might have this problem `nonce too high. expected nonce to be 0 but got 1`, please reset your account in metamask.
+sometime you might have this problem `nonce too high.`, please reset your account in metamask(your account icon(top right corner) => Settings => Advanced => Reset Account)
 
 ### setup environment
 ```
