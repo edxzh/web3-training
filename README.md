@@ -18,6 +18,26 @@ contracts/SimpleStorage.sol is a simplest smart contract that blockchain user ca
 
 contracts/FundMe.sol is a contract that user can fund ETH into, the contract owner can withdraw all the funded ETH. 
 
+## web
+there is a simple html file in `web` folder, where you can open in `chrome` and interact with fundMe contract which deployed in your local hardhat network.
+
+```
+yarn install
+yarn hardhat node
+# start a new terminal, in the same directory
+cd web
+yarn http-server
+```
+
+please note that some browser may raise `cors` issue, please use chrome.
+
+### add hardhat network in metamask
+* your account icon(top right corner) => settings => Networks => Add Network
+* Network name: any name, New RPC URL: http://127.0.0.1:8545, Chain ID: 31337, Currency Symbol: ETH, Save
+* Import an account from terminal that's running hardhat node, import the first `private key`, then you'll have an account in hardhat network that has 10,000 ETH for testing.
+
+sometime you might have this problem `nonce too high. expected nonce to be 0 but got 1`, please reset your account in metamask.
+
 ### setup environment
 ```
 yarn install
