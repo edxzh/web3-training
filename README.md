@@ -42,6 +42,7 @@ sometime you might have this problem `nonce too high.`, please reset your accoun
 ```
 yarn install
 yarn dlx @yarnpkg/sdks vscode
+cp .env.example .env # add your keys
 ```
 
 ### deploy contract to hardhat blockchain
