@@ -1,8 +1,8 @@
 import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
-const DECIMALS = "18";
-const INITIAL_PRICE = "2000000000000000000000"; // 2000
+const BASE_FEE = "250000000000000000"; // 0.25 is this the premium in LINK?
+const GAS_PRICE_LINK = 1e9; // link per gas, is this the gas lane? // 0.000000001 LINK per gas
 
 const deployMocks: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     const { deployments, getNamedAccounts, network } = hre;
@@ -12,11 +12,10 @@ const deployMocks: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     // If we are on a local development network, we need to deploy mocks!
     if (chainId == 31337) {
         log("Local network detected! Deploying mocks...");
-        await deploy("MockV3Aggregator", {
-            contract: "MockV3Aggregator",
+        await deploy("VRFCoordinatorV2Mock", {
             from: deployer,
             log: true,
-            args: [DECIMALS, INITIAL_PRICE],
+            args: [BASE_FEE, GAS_PRICE_LINK],
         });
 
         log("Mocks Deployed!");
