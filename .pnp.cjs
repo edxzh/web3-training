@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ]],\
             ["@nomiclabs/hardhat-etherscan", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:3.1.0"],\
             ["@nomiclabs/hardhat-waffle", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.0.3"],\
+            ["@openzeppelin/contracts", "npm:4.7.3"],\
             ["@typechain/ethers-v5", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:10.1.0"],\
             ["@typechain/hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:6.1.2"],\
             ["@types/chai", "npm:4.3.3"],\
@@ -1026,6 +1027,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@npmcli/move-file", "npm:2.0.1"],\
             ["mkdirp", "npm:1.0.4"],\
             ["rimraf", "npm:3.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@openzeppelin/contracts", [\
+        ["npm:4.7.3", {\
+          "packageLocation": "./.yarn/cache/@openzeppelin-contracts-npm-4.7.3-c7d67da36c-18382fcacf.zip/node_modules/@openzeppelin/contracts/",\
+          "packageDependencies": [\
+            ["@openzeppelin/contracts", "npm:4.7.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10566,6 +10576,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ]],\
             ["@nomiclabs/hardhat-etherscan", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:3.1.0"],\
             ["@nomiclabs/hardhat-waffle", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:2.0.3"],\
+            ["@openzeppelin/contracts", "npm:4.7.3"],\
             ["@typechain/ethers-v5", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:10.1.0"],\
             ["@typechain/hardhat", "virtual:4e2db48358fc68b66c75500bb20baba3e1c237de4a03a1b3f3d2f250998706b9198f6a9e36d75e4964a34250ef28a8bfbd44fb8988397dcd2b677d76a49f130d#npm:6.1.2"],\
             ["@types/chai", "npm:4.3.3"],\
