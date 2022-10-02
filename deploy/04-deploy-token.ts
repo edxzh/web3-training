@@ -13,7 +13,7 @@ const deployToken: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     const { deployer } = await getNamedAccounts();
 
     // const chainId = network.config.chainId;
-    const token = await deploy("token", {
+    const token = await deploy("Token", {
         from: deployer,
         args: [INITIAL_SUPPLY],
         log: true,
