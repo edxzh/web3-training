@@ -17,6 +17,7 @@ This project is to keep track of my journey of learning web3. includes:
 1. SimpleStorage.sol: a simplest smart contract that blockchain user can store and retrieve a value from blockchain.
 2. FundMe.sol: user can fund ETH into, the contract owner can withdraw all the funded ETH.
 3. Raffle.sol: all users can enter in Raffle, the program will randomly pick up a winner and clean prize pool.
+4. Token.sol: ERC20 token.
 
 ## web
 there is a simple html file in `web` folder, where you can open in `chrome` and interact with `fundMe` contract which deployed in your local hardhat network.
